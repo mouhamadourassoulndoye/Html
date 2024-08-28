@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace personnel - E-Learning</title>
+    <link rel="stylesheet" href="profil.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div>
+        <p></p>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+    </header>
+    <main class="container">
+        <section class="welcome-intro">
+            <div class="welcome-text">
+                <h1>Bienvenue sur votre espace personnel, Maimouna !</h1>
+                <p>Explorez vos cours, suivez votre progression et plongez dans de nouvelles connaissances à votre
+                    rythme.</p>
+            </div>
+            <div class="welcome-image">
+                <img src="images/profil.jpg" alt="Étudiante travaillant">
+            </div>
+        </section>
+
+        <section class="courses-section">
+            <h2>Mes cours actuels</h2>
+            <div class="course-grid">
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images/python/p1.jpg')"></div>
+                    <div class="course-info">
+                        <div class="course-title">Apprendre Python</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 30%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card">
+                    <div class="course-image" style="background-image: url('images//java/j1.jpg')"></div>
+                    <div class="course-info">
+                        <div class="course-title">Introduction à Java</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 10%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="course-card" id="web-dev-course">
+                    <div class="course-image" style="background-image: url('images//parcours/e-devweb.jpg')"></div>
+                    <div class="course-info">
+                        <div class="course-title">Développement Web: Parcours complet</div>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 5%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="more-courses">
+            <h1>Explorez Plus de Cours pour Améliorer Votre Apprentissage</h1>
+            <div class="course-grid">
+                <div class="course-item">
+                    <img src="images/inforInternet.jpg" alt="Informatique et Internet" class="course-image">
+                    <div class="course-title">Informatique et Internet</div>
+                </div>
+                <div class="course-item">
+                    <img src="images/dataIngenieur.jpg" alt="Ingénieur des données" class="course-image">
+                    <div class="course-title">Ingénieur des données</div>
+                </div>
+                <div class="course-item">
+                    <img src="images/mdigital.jpg" alt="Marketing Digital" class="course-image">
+                    <div class="course-title">Marketing Digital</div>
+                </div>
+                <div class="course-item">
+                    <img src="images/js.jpg" alt="JavaScript" class="course-image">
+                    <div class="course-title">JavaScript</div>
+                </div>
+                <div class="course-item">
+                    <img src="images/hadoop.png" alt="Introduction à l'écosystème Hadoop" class="course-image">
+                    <div class="course-title">Introduction à l'écosystème Hadoop</div>
+                </div>
+                <div class="course-item">
+                    <img src="images/htmlCss.jpg" alt="HTML CSS" class="course-image">
+                    <div class="course-title">Python cours avancé</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 E-Daara. </p>
+        </div>
+    </footer>
+    <!-- Popup Overlay -->
+    <div class="popup-overlay" id="popup-overlay"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <div class="popup-content" id="popup-content">
+            <!-- Le contenu de module-parcours.html sera injecté ici -->
+        </div>
+    </div>
+    <script src="profil.js"></script>
+
+</body>
+
+</html>

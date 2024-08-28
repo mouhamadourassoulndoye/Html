@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation des Cours et Parcours</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar"></div>
+        <p></p>
+        <script>
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                });
+        </script>
+    </header>
+
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+                <h2>Transformez votre avenir avec nos formations en ligne gratuites.</h2>
+                <p>Commencez votre parcours d'apprentissage dès aujourd'hui.</p>
+                <a href="#inscription" class="btn-inscription">S'inscrire maintenant</a>
+            </div>
+            <div class="intro-image">
+                <img src="images/elearning-image.jpg" alt="Image de formation">
+            </div>
+        </section>
+
+        <section class="course-overview">
+            <h2>Explorez Nos Formations</h2>
+            <p>Découvrez les formations qui correspondent le mieux à vos besoins et intérêts. Trouvez facilement le
+                parcours qui vous convient parmi notre vaste sélection de cours.</p>
+
+            <div class="course-tags">
+                <span class="tag" data-filter="python">Python</span>
+                <span class="tag" data-filter="java">Java</span>
+                <span class="tag" data-filter="php">PHP</span>
+            </div>
+
+            <div class="course-carousel">
+                <button class="carousel-left">&#9664;</button>
+                <div class="course-list">
+                    <!-- Exemple de cours en Python -->
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p1.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 10 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p2.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 12 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p3.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 12 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p4.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 12 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p3.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 12 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="python">
+                        <div class="course-details">
+                            <img src="images/python/p4.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 12 heures</p>
+                        </div>
+                    </div>
+                    <!-- Ajouter d'autres cours ici... -->
+
+                    <!-- Exemple de cours en Java -->
+                    <div class="course-item" data-category="java">
+                        <div class="course-details">
+                            <img src="images/java/j1.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 15 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="java">
+                        <div class="course-details">
+                            <img src="images/java/j2.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 15 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="java">
+                        <div class="course-details">
+                            <img src="images/java/j3.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 15 heures</p>
+                        </div>
+                    </div>
+                    <div class="course-item" data-category="java">
+                        <div class="course-details">
+                            <img src="images/java/j4.jpg" alt="">
+                            <p>Nom du Formateur</p>
+                            <p>Durée : 15 heures</p>
+                        </div>
+                    </div>
+                    <!-- Ajouter d'autres cours ici... -->
+                </div>
+                <button class="carousel-right">&#9654;</button>
+            </div>
+        </section>
+
+        <section class="course-paths">
+            <h2>Des formations pratiques et professionnelles permettant la validation de compétences</h2>
+
+            <div class="path-carousel">
+                <button class="carousel-left">&#9664;</button>
+                <div class="path-list">
+                    <!-- Exemple de parcours -->
+                    <div class="path-item">
+                        <img src="images/parcours/e-devweb.jpg" alt="Parcours 1">
+                        <p>Titre du Parcours 1</p>
+                    </div>
+                    <div class="path-item">
+                        <img src="images/parcours/dataIngenieur.jpg" alt="Parcours 2">
+                        <p>Titre du Parcours 2</p>
+                    </div>
+                    <div class="path-item">
+                        <img src="images/parcours/mdigital.jpg" alt="Parcours 3">
+                        <p>Titre du Parcours 3</p>
+                    </div>
+                    <!-- On peut ajouter d'autres parcours ici si nécessaire -->
+
+                    <button class="carousel-right">&#9654;</button>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-item">
+                <h2 class="footer-title">A propos de nous</h2>
+                <p>E-Daara est une plateforme de formation en ligne dédiée à rendre l'éducation accessible à tous. Notre
+                    mission est de fournir des cours de haute qualité sur divers sujets, permettant à chacun de se
+                    former à son propre rythme, peu importe où il se trouve.</p>
+            </div>
+            <div class="footer-item">
+                <h2 class="footer-title">Support technique</h2>
+                <p>Pour toute assistance technique, n'hésitez pas à nous contacter. Nous sommes disponibles pour vous
+                    aider avec les problèmes suivants :</p>
+                <ul class="support-list">
+                    <li>Problèmes de connexion</li>
+                    <li>Difficultés avec l'utilisation de la plateforme</li>
+                    <li>Erreurs techniques ou bugs</li>
+                    <li>Questions concernant la compatibilité du navigateur</li>
+                </ul>
+                <p>Vous pouvez nous joindre par email à <a href="support@exemple.com">support@exemple.com</a></p>
+            </div>
+
+            <div class="footer-item">
+                <h2 class="footer-title">Support pédagogique</h2>
+                <p>Si vous avez des questions concernant les cours ou les formations, notre équipe pédagogique est là
+                    pour vous aider. Nous offrons un soutien sur :</p>
+                <ul class="support-list">
+                    <li>Compréhension des contenus des cours</li>
+                    <li>Assistance pour les devoirs et les projets</li>
+                    <li>Conseils pour choisir les formations adaptées à vos objectifs</li>
+                    <li>Réponses aux questions spécifiques sur le programme</li>
+                </ul>
+                <p>Pour toute demande, veuillez nous contacter par email à <a
+                        href="pedagogie@exemple.com">pedagogie@exemple.com</a></p>
+            </div>
+
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 E-Daara. </p>
+        </div>
+    </footer>
+</body>
+<script src="visualisation.js"></script>
+
+
+</html>

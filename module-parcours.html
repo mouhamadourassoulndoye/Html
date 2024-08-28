@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grille de modules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid brown;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        .module {
+            background-color: #e0e0e0;
+            border: 1px solid #fff;
+            padding: 35px;
+            text-align: center;
+            font-size: 20px;
+            position: relative;
+        }
+
+        .module::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background-color: #000080;
+        }
+
+        /* Responsivité */
+        @media screen and (max-width: 1200px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .module {
+                font-size: 18px;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="module">Module 1:<br>Introduction au développement web</div>
+        <div class="module">Module 2:<br>Apprendre HTML et CSS</div>
+        <div class="module">Module 3:<br>Apprendre JavaScript</div>
+        <div class="module">Module 4:<br>Apprendre Bootstrap</div>
+        <div class="module">Module 5:<br>Apprendre PHP</div>
+        <div class="module">Module 6:<br>MySQL</div>
+        <div class="module">Module 7:<br>Créer un blog avec WordPress</div>
+        <div class="module">Module 8:<br>Déploiement</div>
+    </div>
+</body>
+
+</html>
